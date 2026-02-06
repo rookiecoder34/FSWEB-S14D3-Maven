@@ -1,9 +1,9 @@
 package org.example;
 
-import org.example.arge.CarSkeleton;
-import org.example.arge.HybridCar;
-import org.example.company.Car;
+
 import org.example.company.*;
+import org.example.arge.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -39,10 +39,14 @@ public class Main {
 
         System.out.println(holden.brake());
 
-        CarSkeleton cs=new HybridCar("tESLA","HİBRİT ARA.",10000,5,4);
+        Car mitsubishi2= new Mitsubishi(6, "Outlander VRX 4WD");
+        printStartEngine(mitsubishi2);
 
-        cs.startEngine();
 
 
+
+    }
+    public static void printStartEngine(Car car){
+        System.out.println(car.startEngine());
     }
 }

@@ -1,43 +1,41 @@
 package org.example.arge;
 
-import org.example.company.*;
+
 
 public class CarSkeleton {
     private String name;
-    private Car car;
     private String description;
 
-
-    public String getName() {
-        return name;
-    }
-
-    public Car getCar() {
-        return car;
-    }
-
-    public String getDescription() {
-        return description;
-    }
 
     public CarSkeleton(){
 
     }
 
-    public CarSkeleton(String name,String description){
-        this.name=name;
+    public CarSkeleton(String name,String description) {
+        this.name = name;
         this.description=description;
     }
 
-    public void startEngine(){
+        public String getName() {
+        return name;
+    }
 
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void startEngine(){
+        System.out.println("The car's engine is starting.");
     }
 
     public void drive(){
+        System.out.println("The car is driving.");
         runEngine();
     }
 
     protected void runEngine(){
+        System.out.println("The car's engine is running.");
 
     }
 

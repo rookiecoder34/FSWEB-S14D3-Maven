@@ -4,7 +4,7 @@ public class GasPoweredCar extends CarSkeleton {
     private double avgKmPerLitre;
     private int cylinders;
 
-    GasPoweredCar(String name, String description, double avgKmPerLitre, int cylinders) {
+    public GasPoweredCar(String name, String description, double avgKmPerLitre, int cylinders) {
         super(name, description);
         this.avgKmPerLitre = avgKmPerLitre;
         this.cylinders = cylinders;
@@ -22,11 +22,12 @@ public class GasPoweredCar extends CarSkeleton {
 
     @Override
     public void startEngine() {
-        System.out.println("Hybrid car engine started");
+        System.out.println("GasPoweredCar - startEngine");
     }
 
     @Override
     public void drive() {
-        System.out.println("Hybrid");
+        System.out.println("GasPoweredCar - drive");
+        runEngine();
     }
 }

@@ -3,10 +3,11 @@ package org.example.company;
 import java.util.Objects;
 
 public class Car {
-    private final boolean engine;
+    private boolean engine;
     private int cylinders;
     private String name;
-    private final int wheels;
+    private int wheels;
+
     public Car (int cylinders, String name) {
         this.engine = true;
         this.cylinders = cylinders;
@@ -52,7 +53,7 @@ public class Car {
 
     public String brake() {
         System.out.println(getClass().getSimpleName());
-        return "the car's braking";
+        return "the car is braking";
     }
 
 
