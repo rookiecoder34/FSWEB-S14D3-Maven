@@ -1,0 +1,60 @@
+package org.example.company;
+
+import java.util.Objects;
+
+public class Car {
+    private final boolean engine;
+    private int cylinders;
+    private String name;
+    private final int wheels;
+    public Car (int cylinders, String name) {
+        this.engine = true;
+        this.cylinders = cylinders;
+        this.name = name;
+        this.wheels = 4;
+    }
+
+
+    public String getName () {
+        return name;
+    }
+
+    public int getCylinders() {
+        return cylinders;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "cylinders=" + cylinders +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return cylinders == car.cylinders && Objects.equals(name, car.name);
+    }
+    public String startEngine() {
+        System.out.println(getClass().getSimpleName());
+       return "the car's engine is starting";
+    }
+
+
+
+
+    public String accelerate() {
+        System.out.println(getClass().getSimpleName());
+        return "the car is accelerating";
+    }
+
+    public String brake() {
+        System.out.println(getClass().getSimpleName());
+        return "the car's braking";
+    }
+
+
+
+}
